@@ -1,3 +1,105 @@
 @import 'vars';
 @import 'global';
 @import 'fonts';
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+
+.header__logo {
+    left: 65px;
+    position: relative;
+    font-size: 45px;
+    font-weight: 700;
+    a {
+        color: $blue;
+    }
+    span {
+        color: black;
+    }
+}
+
+.header__logo::before {
+    content: " ";
+    position: absolute;
+    background-image: url(../images/Logo.png);
+    width: 50px;
+    height: 50px;
+    left: -55px;
+}
+
+.header__icons {
+    height: 60px;
+    width: 140px;
+}
+
+.header__button {
+    margin-left: 400px;
+    border: none;
+    color: white;
+    background-color: $blue;
+    padding: 10px 20px 15px;
+    border-radius: 18px;
+}
+
+.header__account {
+    position: relative;
+}
+
+.header__account-text {
+    span {
+        color: $blue
+    }
+}
+
+.header__account-text::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/icons/photo.svg);
+    width: 50px;
+    height: 50px;
+    left: -70px;
+    top: -5px;
+}
+
+.header__bottom {
+    padding-top: 17px;
+}
+
+.header__inner-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__bottom-menu {
+    li+li {
+        margin-left: 27px;
+    }
+}
+
+.header__bottom-form {
+    position: relative;
+    button {
+        outline: transparent;
+        right: 0;
+        position: absolute;
+        height: 45px;
+        width: 70px;
+        border-radius: 20px;
+        border: none;
+        background-color: $blue;
+    }
+    input {
+        outline: transparent;
+        font-size: 15px;
+        line-height: 30;
+        color: #898f96;
+        border: 1px #d9dfe5 solid;
+        border-radius: 20px;
+        height: 45px;
+        width: 360px;
+        padding-left: 25px;
+    }
+}
